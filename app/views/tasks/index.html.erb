@@ -1,0 +1,33 @@
+<h1>Tasks</h1>
+
+
+
+<%= form_for(Task.new) do |f| %>
+	<%= f.text_field :content %>
+	<%= f.submit "Add Task" %>
+<% end %>
+
+<h3 id="all_tasks">All Tasks</h3>
+
+
+
+<h3 id="incomplete_hl">Incomplete Tasks</h3>
+	<div id="incomplete_tasks">
+		<%= render @incomplete %>
+	</div>
+
+<h3 id="comp">Completed Tasks</h3>
+	<div id="complete_tasks">
+		<%= render @complete %>
+	</div>
+
+
+<script>
+	
+	//var arr = <%= @complete %>;
+	//var d = document.getElementById('comp');
+	//d.innerHTML = "Gogo Javascript <%=  @complete[0].content %>";
+
+	
+
+</script>
